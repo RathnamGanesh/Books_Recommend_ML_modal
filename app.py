@@ -1,4 +1,5 @@
-# import the librareis 
+# import the librareis
+import gdown
 import streamlit as st 
 import pickle 
 import numpy as np 
@@ -14,6 +15,15 @@ st.markdown('''
             ''')
 
 # import our models : 
+# Function to download books.pkl from Google Drive
+def download_books():
+    file_id = "10FIQ-7CusyHDGWYFYZ039BjSbWopOxFY"  # Replace with actual Google Drive file ID
+    output = "books.pkl"
+    url = f"https://drive.google.com/uc?id={file_id}"
+    gdown.download(url, output, quiet=False)
+
+# Download books.pkl before loading
+download_books()
 
 popular = pickle.load(open('popular.pkl','rb'))
 books = pickle.load(open('books.pkl','rb'))
