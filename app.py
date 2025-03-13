@@ -15,10 +15,10 @@ st.markdown('''
 
 # import our models : 
 
-popular = pickle.load(open('popular.pkl','wb'))
-books = pickle.load(open('books.pkl','wb'))
-pt = pickle.load(open('pt.pkl','wb'))
-similarity_scores = pickle.load(open('similarity_scores.pkl','wb')) 
+popular = pickle.load(open('popular.pkl','rb'))
+books = pickle.load(open('books.pkl','rb'))
+pt = pickle.load(open('pt.pkl','rb'))
+similarity_scores = pickle.load(open('similarity_scores.pkl','rb')) 
 
 # Top 50 Books : 
 
